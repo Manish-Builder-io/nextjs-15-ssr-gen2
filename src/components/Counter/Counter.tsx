@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./styles.module.css";
 
 interface CounterProps {
   initialCount?: number;
@@ -18,12 +17,18 @@ function Counter({ initialCount = 99 }: CounterProps) {
   };
 
   return (
-    <div className={styles.counter}>
-      <button className={styles.btn} onClick={decrement}>
+    <div className="my-8 mx-auto flex w-full max-w-[190px]">
+      <button 
+        className="w-[42px] text-3xl font-bold bg-indigo-600 text-white border-none rounded cursor-pointer leading-[1.4] hover:opacity-80 transition-opacity"
+        onClick={decrement}
+      >
         -
       </button>
-      <span className={styles.count}>{count}</span>
-      <button className={styles.btn} onClick={increment}>
+      <span className="flex-1 text-[42px] text-center">{count}</span>
+      <button 
+        className="w-[42px] text-3xl font-bold bg-indigo-600 text-white border-none rounded cursor-pointer leading-[1.4] hover:opacity-80 transition-opacity"
+        onClick={increment}
+      >
         +
       </button>
     </div>
